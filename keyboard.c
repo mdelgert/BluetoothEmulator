@@ -118,7 +118,7 @@ unsigned char reportmap[47] = {0x05,0x01,0x09,0x06,0xA1,0x01,0x85,0x01,0x05,0x07
     //   LECHAR=Report1         SIZE=8  Permit=92  UUID=2A4D  
 unsigned char report[8] = {0,0,0,0,0,0,0,0};
 
-unsigned char *name = "HID"; 
+unsigned char *name = "PiKey"; 
 unsigned char appear[2] = {0xC1,0x03};  // 03C1 = keyboard icon appears on connecting device 
 unsigned char pnpinfo[7] = {0x02,0x6B,0x1D,0x46,0x02,0x37,0x05};
 unsigned char protocolmode[1] = {0x01};
