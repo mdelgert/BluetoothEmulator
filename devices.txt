@@ -2,7 +2,7 @@
      ; This file must list all network devices - here are some examples
      ; Set the local device's address on the first line below 
      
-DEVICE = p3         TYPE=MESH    NODE=1  ADDRESS = D8:3A:DD:28:50:61
+DEVICE = p1         TYPE=MESH    NODE=1  ADDRESS = E4:5F:01:8E:26:EA
   PRIMARY_SERVICE = 1800
     LECHAR = Device name  PERMIT=06  SIZE=16  UUID=2A00   ; index 0
   PRIMARY_SERVICE = 112233445566778899AABBCCDDEEFF00

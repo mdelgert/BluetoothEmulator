@@ -1,3 +1,25 @@
+# Keycodes
+https://kbdlayout.info/kbduk
+https://kbdlayout.info/kbdus
+
+# Raspberry Pi 400 as a USB HID Keyboard & Mouse
+https://github.com/Gadgetoid/pi400kb/tree/main
+
+# PiKVM
+https://github.com/search?q=repo%3Apikvm%2Fkvmd%20bluetooth&type=code
+https://github.com/SySS-Research/bluetooth-keyboard-emulator
+https://github.com/nutki/bt-keyboard-switcher
+
+# Clear bluetooth cache
+https://answers.microsoft.com/en-us/windows/forum/all/cant-connect-to-bluetooh-devices-in-anyway/479adf4b-5535-4393-9a99-8d59a9e3126a
+https://answers.microsoft.com/en-us/windows/forum/all/how-to-delete-all-paired-bluetooth-devices/a766991f-0b8c-4a79-84ea-d579775fa7bf
+
+```ps
+Remove-Item -Path HKLM:\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Devices\* -Recurse
+net stop bthserv
+net start bthserv
+```
+
 # BluetoothEmulator
 https://github.com/mx3030/btEmulator
 https://github.com/4ndrej/hidclient
