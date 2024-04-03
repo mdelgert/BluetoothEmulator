@@ -127,7 +127,13 @@ def lecallback(clientnode,op,cticn):
   if(op == btfpy.LE_CONNECT):
     print("Connected OK. Key presses sent to client. ESC stops server")
     print("F10 sends Hello plus Enter")
- 
+  
+  # test = "test\n"
+  # for i in range(3):
+  #   for n in range(len(test)):
+  #     send_key(ord(test[n]))
+  #     time.sleep(1) 
+
   if(op == btfpy.LE_KEYPRESS):
     # cticn = ASCII code of key OR btferret custom code
     if(cticn == 23):

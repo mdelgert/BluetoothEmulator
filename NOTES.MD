@@ -1,3 +1,13 @@
+# Bluez HID over GATT (HOGP) Keyboard Emulator Example
+https://gist.github.com/HeadHodge/2d3dc6dc2dce03cf82f61d8231e88144
+sudo nano /etc/bluetooth/main.conf
+#Restricts all controllers to the specified transport. Default value
+#is "dual", i.e. both BR/EDR and LE enabled (when supported by the HW).
+#Possible values: "dual", "bredr", "le"
+#ControllerMode = dual
+#ControllerMode = bredr
+ControllerMode = le
+
 # Pairing Bluetooth Devices in Dual Boot with Linux Ubuntu and Windows 10/11
 https://gist.github.com/madkoding/f3cfd3742546d5c99131fd19ca267fd4?permalink_comment_id=4473355
 sudo hciconfig hci0 down
