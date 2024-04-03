@@ -87,3 +87,7 @@ sudo hciconfig
 sudo hciconfig hci0 down
 sudo hciconfig hci0 up
 sudo hcitool -i hci0 lescan
+
+# Keyboards
+https://kbdlayout.info/kbduk?arrangement=ISO105
+https://kbdlayout.info/kbdus
