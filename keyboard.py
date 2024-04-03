@@ -111,7 +111,9 @@ reportmap = [0x05,0x01,0x09,0x06,0xA1,0x01,0x85,0x01,0x05,0x07,0x19,0xE0,0x29,0x
     #   LECHAR=Report1         SIZE=8  Permit=92  UUID=2A4D  
 report = [0,0,0,0,0,0,0,0]
 
-name = "HID"
+#name = "HID"
+name = "p2"
+
 appear = [0xC1,0x03]  # 03C1 = keyboard icon appears on connecting device 
 pnpinfo = [0x02,0x6B,0x1D,0x46,0x02,0x37,0x05]
 protocolmode = [0x01]
@@ -260,15 +262,23 @@ btfpy.Write_ctic(node,btfpy.Find_ctic_index(node,btfpy.UUID_2,uuid),pnpinfo,0)
  
   # Choose the following 6 numbers
   # 2 hi bits of first number must be 1
+
 randadd = [0xD3,0x56,0xDB,0x15,0x32,0xA0]
-btfpy.Set_le_random_address(randadd)
+
+#btfpy.Set_le_random_address(randadd)
      
 btfpy.Keys_to_callback(btfpy.KEY_ON,0)   # enable LE_KEYPRESS calls in lecallback
                                          # 0 = GB keyboard  
-btfpy.Set_le_wait(20000)  # Allow 20 seconds for connection to complete
+btfpy.Set_le_wait(30000)  # Allow 20 seconds for connection to complete
                                          
 btfpy.Le_pair(btfpy.Localnode(),btfpy.JUST_WORKS,0)  # Easiest option, but if client requires
-                                                     # passkey security - remove this command  
+                                                     # passkey security - remove this command
+
+#btfpy.Le_pair(btfpy.Localnode(),btfpy.PASSKEY_RANDOM | btfpy.PASSKEY_REMOTE | btfpy.BOND_NEW,0);
+
+#btfpy.Le_pair(btfpy.Localnode(),btfpy.PASSKEY_FIXED | btfpy.PASSKEY_REMOTE,123456)
+
+#btfpy.Le_pair(btfpy.Localnode(),btfpy.BOND_REPAIR,0)
 
 btfpy.Le_server(lecallback,0)
   

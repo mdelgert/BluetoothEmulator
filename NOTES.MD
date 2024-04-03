@@ -1,3 +1,19 @@
+# Pairing Bluetooth Devices in Dual Boot with Linux Ubuntu and Windows 10/11
+https://gist.github.com/madkoding/f3cfd3742546d5c99131fd19ca267fd4?permalink_comment_id=4473355
+sudo hciconfig hci0 down
+sudo bluemoon -A
+sudo hciconfig hci0 up
+sudo systemctl restart bluetooth.service
+
+# How To Remove Stubborn Bluetooth Devices in Windows
+https://www.tomshardware.com/how-to/remove-stubborn-bluetooth-devices-in-windows
+https://www.systweak.com/blogs/cant-remove-bluetooth-device-on-windows/
+https://arstechnica.com/civis/threads/windows-11-bluetooth-pairing-key-location.1484342/
+https://github.com/petzval/btferret/issues/38
+
+# Pairing keys location
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys
+
 # Keycodes
 https://kbdlayout.info/kbduk
 https://kbdlayout.info/kbdus
